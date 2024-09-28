@@ -1,0 +1,226 @@
+ .site-input-group {
+   margin-bottom: 20px;
+ }
+
+ .site-label {
+   font-size: 13px;
+   line-height: 16px;
+   color: rgba($color: $white, $alpha: 0.6);
+   margin-bottom: 10px;
+   user-select: none;
+   font-family: $font-medium;
+ }
+
+ .form-check-label {
+   color: #fff;
+   font-family: $font-medium;
+   font-size: 13px;
+ }
+
+ .site-input {
+  font-family: $font-medium;
+   color: $white;
+   width: 100%;
+   height: 40px;
+   background-color: #1F1E20;
+   border-radius: 10px;
+   padding: 8px 13px;
+   font-size: 14px;
+   line-height: 22px;
+   display: block;
+   border: 1px solid #FFFFFF1A;
+   background-clip: padding-box;
+   appearance: none;
+   -webkit-transition: border-color 0.15s ease-in-out,
+     -webkit-box-shadow 0.15s ease-in-out;
+   -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+   &:focus,
+   &:active {
+     color: $white;
+     border-color: $brand-primary-hover;
+     outline: 0;
+     box-shadow: none;
+     background-color: transparent;
+   }
+
+   &::-ms-input-placeholder {
+     color: rgba($color: $white, $alpha: 0.6);
+     opacity: 1;
+
+   }
+
+   &::-webkit-input-placeholder {
+     color: rgba($color: $white, $alpha: 0.6);
+     opacity: 1;
+
+   }
+
+   &::placeholder {
+     color: rgba($color: $white, $alpha: 0.6);
+     opacity: 1;
+
+   }
+
+   &.site-input-md {
+     height: 40px;
+     display: inline-block;
+     width: auto;
+   }
+
+   &.site-input-sm {
+     width: auto;
+     height: 35px;
+     padding: 8px 12px;
+     font-size: 14px;
+   }
+
+   &.bg-gray {
+     background-color: #333233;
+     color: $white;
+   }
+
+ }
+
+ .form-select {
+   background-image: url("../images/icons/icn-select-drodown.png");
+   background-size: 10px;
+   cursor: pointer;
+
+   option {
+     color: #1F1E20;
+   }
+ }
+
+ input:-webkit-autofill,
+ input:-webkit-autofill:hover,
+ input:-webkit-autofill:focus,
+ input:-webkit-autofill:active {
+   transition: background-color 9999s ease-in-out 0s;
+ }
+
+ textarea {
+   height: auto;
+ }
+
+ textarea.form-control {
+   height: auto !important;
+ }
+
+ textarea.input-modify {
+   height: auto !important;
+ }
+
+ .search-wrapper {
+   position: relative;
+
+   .search-icon {
+     position: absolute;
+     top: 8px;
+     left: 15px;
+   }
+
+   .site-input {
+     background-color: #333233;
+     padding-left: 32px;
+     border-radius: 11px;
+   }
+ }
+
+ .site-form-wrap {
+   padding: 17px;
+   border-radius: 10px;
+ }
+
+ .inline-field {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   border: 1px solid #FFFFFF1A;
+   padding: 13px 14px;
+   border-radius: 10px;
+ }
+
+ .inline-radio-checkbox {
+   display: flex;
+   align-items: center;
+   gap: 24px;
+ }
+
+ .info-title, .info-value{
+   font-size: 13px;
+   font-family: $font-medium;
+ }
+ .info-right {
+  .theme-btn {
+   font-family: $font-medium; 
+  }  
+ }
+
+ .info-value {
+   color: #fff;
+ }
+
+ .info-border {
+  border: 1px solid #FFFFFF1A;
+  padding: 10px 13px;
+  border-radius: 6px;
+ }
+
+ /*Site Checkbox*/
+ .site_checkbox {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 12px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: $font-medium;
+}
+.site_checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 19px;
+  width: 19px;
+  top: 0;
+  left: 0;
+  z-index: 9;
+}
+.site_checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 19px;
+  width: 19px;
+  border:1px solid #FFFFFF33;
+  background-color:#333233;
+  border-radius: 5px;
+}
+.site_checkbox input:checked ~ .site_checkmark {
+  background-color: $white;
+  border-color:$white;
+}
+.site_checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.site_checkbox input:checked ~ .site_checkmark:after {
+  display: block;
+}
+.site_checkbox .site_checkmark:after {
+  left: 5px;
+  top: 2px;
+  width: 6px;
+  height: 10px;
+  border: solid #121212;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+/* // Site Checkbox*/

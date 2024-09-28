@@ -1,0 +1,242 @@
+.main-techno-wrap {
+  background-color: #262626;
+  padding: 0 15px;
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+}
+
+.site-sidebar {
+  position: fixed;
+  top: 0;
+  left: 11px;
+  bottom: 0;
+  width: 186px;
+  text-align: center;
+  padding: 15px 0px;
+  height: 100vh;
+  z-index: 999;
+
+  @include respond(tab-port) {
+    left: -100%;
+  }
+
+  .active-thumb {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .brand-link {
+    img {
+      -webkit-transition: opacity .3s ease, visibility .3s ease;
+      -o-transition: opacity .3s ease, visibility .3s ease;
+      transition: opacity .3s ease, visibility .3s ease;
+    }
+  }
+
+  .sidebar_btn_toggle {
+    display: none;
+  }
+
+  &:hover {
+    .sidebar_btn_toggle {
+      display: inline-block;
+    }
+  }
+}
+
+.brand-link {
+  margin: 0px auto 15px;
+  display: block;
+
+  img {
+    width: auto;
+    height: 34px;
+  }
+}
+
+.left-side-bar {
+  border-radius: 15px;
+  background-color: #1F1E20;
+  padding: 20px 13px 10px 13px;
+  height: calc(100vh - 90px);
+  display: flex;
+  justify-content: space-between;
+  flex-flow: column;
+
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    list-style: none;
+    padding-bottom: 15px;
+
+    &>a {
+      color: #ffffffb3;
+      font-size: 13px;
+      line-height: 19px;
+      text-decoration: none;
+      text-align: left;
+      border-radius: 10px;
+      font-family: $font-medium;
+      transition: margin-left .3s linear, opacity .3s ease, visibility .3s ease;
+      white-space: nowrap;
+      display: inline-flex;
+      width: 100%;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 12px;
+
+      .nav-sidemenu-text {
+        display: inline-block;
+        -webkit-animation-name: fadeIn;
+        animation-name: fadeIn;
+        -webkit-animation-duration: .3s;
+        animation-duration: .3s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        margin: 0;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 1;
+        letter-spacing: .2px;
+        text-transform: capitalize;
+        padding: 0;
+        font-weight: 400;
+
+      }
+
+      &.active,
+      &:hover,
+      &:focus {
+        background: #4B4B4B;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.profile-detail {
+  background-color: #262626;
+  padding: 20px 13px;
+  border-radius: 15px;
+
+  p {
+    color: #ffffff;
+    margin-bottom: 0px;
+    font-size: 13px;
+    line-height: 20px;
+    text-align: left;
+    font-family: $font-semibold;
+  }
+
+  span {
+    color: #ffffff;
+    margin-bottom: 0px;
+    font-size: 12px;
+    line-height: 17px;
+    text-align: left;
+    color: #ffffffb3;
+    display: block;
+    font-family: $font-medium;
+  }
+}
+
+.profile-detail-in {
+  display: flex;
+  gap: 11px;
+  align-items: center;
+
+  img {
+    width: 38px;
+    height: 38px;
+    margin: 0;
+    border: 5px solid #121212;
+    border-radius: 50%;
+  }
+}
+
+.logout-button {
+  li {
+    padding: 0;
+    margin-top: 16px;
+
+    &>a {
+      padding: 0;
+      display: flex;
+      align-items: center;
+      border: 1px solid #ffffff1a;
+      border-radius: 14px;
+      padding: 10px;
+      font-family: $font-medium;
+    }
+  }
+}
+
+.sidebar_btn_toggle {
+  position: absolute;
+  right: -14px;
+  top: 14px;
+  background: #fff;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  z-index: 121;
+}
+
+.site-wrapper-active {
+  .sidebar_icon_default {
+    transform: rotate(180deg);
+  }
+
+  @media (min-width: 992px) {
+    .site-sidebar {
+      width: 86px;
+    }
+
+    .main-cont-wrapper {
+      margin-left: 100px;
+    }
+
+    .left-side-bar li>a .nav-sidemenu-text {
+      width: 0;
+      visibility: hidden;
+    }
+
+    .prof-detail {
+      display: none;
+    }
+
+    .site-sidebar .active-thumb {
+      display: inline-block;
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .site-sidebar .defult-thumb {
+      display: none;
+      visibility: hidden;
+      opacity: 0;
+    }
+
+  }
+
+}
+
+@media (max-width: 991.98px) {
+  .site-wrapper-active aside.site-sidebar {
+    left: 0;
+  }
+
+  .site-wrapper-active .site-sidebar .sidebar_btn_toggle {
+    display: none;
+  }
+
+  .site-wrapper-active .site-sidebar .brand-link {
+    margin: 0px auto 15px;
+    display: none;
+  }
+}

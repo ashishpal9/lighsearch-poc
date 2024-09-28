@@ -1,0 +1,11 @@
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    .sidebar_btn_toggle {
+        position: inherit;
+        
+    }
+    @media (min-width: 992px) {
+        display: none;
+    }
+}
